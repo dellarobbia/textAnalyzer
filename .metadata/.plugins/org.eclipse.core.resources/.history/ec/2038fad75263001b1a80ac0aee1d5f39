@@ -1,0 +1,9 @@
+package textAnalyzer;
+
+public interface ConsoleMenus<T>
+{
+	public void dispPrompt();
+	private T getUserInput() {
+		return null;
+	}
+}

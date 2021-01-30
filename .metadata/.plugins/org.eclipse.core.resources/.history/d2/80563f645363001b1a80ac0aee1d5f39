@@ -1,0 +1,6 @@
+package textAnalyzer;
+
+public interface ConsoleMenus
+{
+	public void dispPrompt();
+}
