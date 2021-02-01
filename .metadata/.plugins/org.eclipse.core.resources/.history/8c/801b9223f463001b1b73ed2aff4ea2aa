@@ -1,0 +1,11 @@
+package textAnalyzer;
+
+public class Parser implements Parsers {
+
+	@Override
+	public <T> boolean isValid(T tryT) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

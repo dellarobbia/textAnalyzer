@@ -1,0 +1,16 @@
+Project Log
+-1/29/21
+ -finished preliminary planning and diagramming
+-1/30/21
+ -began coding
+  -Parsers Interface
+   -Parser SuperClass
+    -HTMLParser SubClass
+  -ConsoleMenus Interface
+-1/31/21
+ -WordCounter Class
+  -Analyzer Interface removed in favor of leaving WordCounter stand-alone
+ -TextAnalyzer prototype Class
+  -successfully returns output of WordCounter's HashMap
+  -words that are counted do not appear to be itterating correctly
+  -HTMLParser appears to be including text between HTML tags

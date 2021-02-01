@@ -1,0 +1,25 @@
+package textAnalyzer;
+
+public class HTMLParser extends Parser implements Parsers
+{
+	//Properties
+	
+	
+	//Constructors
+	public HTMLParser() 
+	{
+		// TODO Auto-generated constructor stub
+	}
+
+	public HTMLParser(boolean ignoreText) 
+	{
+		super(ignoreText);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	//Interface Methods
+	
+	
+	//Class Methods
+}

@@ -1,0 +1,43 @@
+package textAnalyzer;
+
+public class HTMLParser extends Parser implements Parsers
+{
+	
+	//Constructors
+	public HTMLParser() 
+	{
+		//HTMLParsers will be constructed to ignoreText by default
+		setIgnoreText(true);
+	}
+
+	public HTMLParser(boolean ignoreText) 
+	{
+		//Allows user to override ignoreText
+		super(ignoreText);
+	}
+	
+	//Getters & Setters
+	public boolean getIgnoreText()
+	{
+		return ignoreText;
+	}
+	public void setIgnoreText(boolean ignoreText)
+	{
+		this.ignoreText = ignoreText;
+	}
+	
+	//Interface Methods
+	@Override
+	public <T> boolean isValid(T tryT) 
+	{
+		
+		//HTMLParser will return false by default
+		return false;
+	}
+	
+	//Class Methods
+	public void tryT(String string)
+	{
+		
+	}
+}

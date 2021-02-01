@@ -1,0 +1,81 @@
+package textAnalyzer;
+
+import java.util.ArrayList;
+
+public class HTMLParser extends Parser implements Parsers
+{
+	//Properties
+	//determines if the parser is currently inside an HTML tag
+	private boolean isHTMLTag = false;
+	
+	//Constructors
+	//Default Constructor
+	public HTMLParser() 
+	{
+		//HTMLParsers will be constructed to ignoreText by default
+		setIgnoreText(true);
+		//HTMLParsers will assume they are not already inside an HTML tag by default
+		setIsHTMLTag(false);
+	}
+	//Override Constructors
+	public HTMLParser(boolean ignoreText) 
+	{
+		//Allows user to override ignoreText
+		super(ignoreText);
+	}
+	
+	//Getters & Setters
+	public boolean getIsHTMLTag()
+	{
+		return isHTMLTag;
+	}
+	public void setIsHTMLTag(boolean isHTMLTag)
+	{
+		this.isHTMLTag = isHTMLTag;
+	}
+	
+	//Interface Methods
+	@Override
+	public boolean isValid() 
+	{
+		if(isHTMLTag == false && getIgnoreText() == false)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	//Class Methods
+	public void tryString(String string)
+	{
+		if(isHTMLTag == true)
+		{
+			setIgnoreText(true);
+			return;
+		}
+		
+		if(string.contains("<"))
+		{
+			setIsHTMLTag(true);
+			setIgnoreText(isValidTagType(string));
+		}
+	}
+	private boolean isValidTagType(String string)
+	{
+		//Collection of HTML tag prefixes considered valid
+		ArrayList<String> validTagHeaders = new ArrayList<String>();
+		validTagHeaders.add("<H");
+		validTagHeaders.add("<P");
+		
+		for(String validTag : validTagHeaders)
+		{
+			if(string.equals(validTag))
+				return true;
+		}
+		
+		return false;
+	}
+}
