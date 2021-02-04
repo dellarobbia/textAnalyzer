@@ -1,5 +1,0 @@
-package textAnalyzer;
-
-public interface ConsoleMenus {
-
-}

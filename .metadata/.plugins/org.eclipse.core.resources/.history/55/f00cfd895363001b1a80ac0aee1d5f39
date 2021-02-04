@@ -1,9 +1,0 @@
-package textAnalyzer;
-
-import java.util.Scanner;
-
-public interface ConsoleMenus<T>
-{
-	public void dispPrompt();
-	public T getUserInput(Scanner userInput);
-}

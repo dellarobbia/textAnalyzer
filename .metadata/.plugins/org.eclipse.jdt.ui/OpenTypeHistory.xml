@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=TextAnalyzer/src&lt;textAnalyzer{Parsers.java[Parsers" modifiers="513" timestamp="1612123396087"/>
-    <typeInfo handle="=TextAnalyzer/src&lt;textAnalyzer{Parser.java[Parser" modifiers="1" timestamp="1612123396070"/>
+    <typeInfo handle="=TextAnalyzer2/F:\/Java\/lib\/jrt-fs.jar`java.base=/module=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&lt;java.io(FileReader.class[FileReader" modifiers="33" timestamp="1594828932000"/>
+    <typeInfo handle="=TextAnalyzer2/src&lt;textAnalyzer{FileReader.java[FileReader" modifiers="1" timestamp="1612394690623"/>
+    <typeInfo handle="=TextAnalyzer2/src&lt;textAnalyzer{Readers.java[Readers" modifiers="513" timestamp="1612390920182"/>
 </typeInfoHistroy>
