@@ -20,6 +20,7 @@ public class TextAnalyzer
 		testHTMLReader.readFile();
 		WordCounter wordCounter = new WordCounter();
 		wordCounter.countWords(testHTMLReader.toString());
+		wordCounter.sortTopWords();
 		System.out.print(wordCounter.toString());
 	}
 	

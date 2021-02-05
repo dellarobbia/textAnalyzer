@@ -1,6 +1,12 @@
 package textAnalyzer;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map.Entry;
 import java.util.Scanner;
 
 public class WordCounter 
@@ -70,23 +76,29 @@ public class WordCounter
 		}
 	}
 	
-	public HashMap<String, Integer> sortTopWords(int numberOfWords)
+	//sort the words from greatest to least
+	public void sortTopWords()
 	{
+		//create a copy of wordCount to sort
 		HashMap<String, Integer> topWords = new HashMap<String, Integer>();
+		topWords = getWordCount();
 		
-		//sets numberOfWords to a max value that equals the total size of wordCount to prevent endless loop
-		if(numberOfWords > wordCount.size())
-			numberOfWords = wordCount.size();
-		//if a negative value or 0 is entered for numberOfWords, pass the entire unsorted wordCount
-		else if(numberOfWords <= 0)
-			return wordCount;
+		List<Entry<String, Integer>> sortList = new LinkedList<Entry<String, Integer>>(topWords.entrySet());
 		
-		while(topWords.size() < numberOfWords)
-		{
-			
-		}
+		Collections.sort(sortList, new Comparator<Entry<String, Integer>>()   
+		{  
+			public int compare(Entry<String, Integer> word1, Entry<String, Integer> word2)   
+			{  
+				//compare two object and return an integer  
+				return (word2.getValue()).compareTo(word1.getValue());
+			}
+		});
 		
-		return topWords;
+		HashMap<String, Integer> sortedTopWords = new LinkedHashMap<String, Integer>();
+		for(Entry<String, Integer> entry : sortList)
+			sortedTopWords.put(entry.getKey(), entry.getValue());
+		
+		wordCount = sortedTopWords;
 	}
 	
 }
