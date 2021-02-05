@@ -26,8 +26,8 @@ public class HTMLFileReader extends FileReader implements Readers
 		{
 			htmlDocument = Jsoup.parse(getFile(), "UTF-8");
 		
-			String documentLoc = htmlDocument.location();
-			System.out.println(documentLoc);
+			//String documentLoc = htmlDocument.location();
+			//System.out.println(documentLoc);
 			
 			Elements paragraphs = htmlDocument.select("p");
 			
