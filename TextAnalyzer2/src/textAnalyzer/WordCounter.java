@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-public class WordCounter 
+public class WordCounter implements Analyzers
 {
 	//Properties
 	private HashMap<String, Integer> wordCount;
@@ -31,6 +31,16 @@ public class WordCounter
 	}
 	
 	//Interface Methods
+	public String analyze(String analyzeText)
+	{
+		countWords(analyzeText);
+		return toString();
+	}
+	public String analyze(String analyzeText, int numOfTopWords)
+	{
+		countWords(analyzeText);
+		return toString(numOfTopWords);
+	}
 	public String toString()
 	{
 		String dispWordOccurances = "Word Occurances:\n\n";
