@@ -33,7 +33,8 @@ public class WordCounter
 	//Interface Methods
 	public String toString()
 	{
-		String dispWordOccurances = "Word Occurances:\n";
+		String dispWordOccurances = "Word Occurances:\n\n";
+		sortTopWords();
 		
 		for(String word : wordCount.keySet())
 		{
@@ -41,6 +42,21 @@ public class WordCounter
 		}
 		
 		return dispWordOccurances;
+	}
+	public String toString(int numOfWords)
+	{
+		String dispTopWordOccurances = "Top " + numOfWords + " Words:\n\n";
+		int topCounter = 0;
+		sortTopWords();
+		
+		for(String word : wordCount.keySet())
+		{
+			if(topCounter < numOfWords)
+				dispTopWordOccurances += word + ": " + wordCount.get(word) + "\n";
+			topCounter++;
+		}
+		
+		return dispTopWordOccurances;
 	}
 	
 	//Class Methods
@@ -89,7 +105,7 @@ public class WordCounter
 		{  
 			public int compare(Entry<String, Integer> word1, Entry<String, Integer> word2)   
 			{  
-				//compare two object and return an integer  
+				//compare each word and return the one with the higher count 
 				return (word2.getValue()).compareTo(word1.getValue());
 			}
 		});
