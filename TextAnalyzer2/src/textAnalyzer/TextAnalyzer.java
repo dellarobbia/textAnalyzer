@@ -8,13 +8,14 @@ public class TextAnalyzer
 	private static File analyzeFile;
 	private static String fileContents;
 
+/*
 	public static void main(String[] args) 
 	{
 		fileLocPrompt(new Scanner(System.in));
 		parserPrompt(new Scanner(System.in));
 		analyzerPrompt(new Scanner(System.in));
 	}
-	
+*/	
 	//console prompts
 	//give TextAnalyzer a file location to read
 	private static void fileLocPrompt(Scanner userInput)
