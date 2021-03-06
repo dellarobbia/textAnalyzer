@@ -1,21 +1,89 @@
 package textAnalyzer;
 
 import java.io.File;
-import java.util.Scanner;
 
 public class TextAnalyzer 
 {
-	private static File analyzeFile;
-	private static String fileContents;
+	private File analyzeFile;
+	private String fileContents;
 
-/*
+	//Constructors
+	public TextAnalyzer ()
+	{
+		//Empty
+	}
+	/**
+	 * Constructor to build TextAnalyzer using a File object
+	 * @param analyzeFile File object to be passed to the analyzer
+	 */
+	public TextAnalyzer (File analyzeFile)
+	{
+		setAnalyzeFile(analyzeFile);
+	}
+	/**
+	 * Constructor to build TextAnalyzer using a file's location
+	 * @param analyzeFileLoc String representation of a file's location
+	 */
+	public TextAnalyzer (String analyzeFileLoc)
+	{
+		setAnalyzeFile(analyzeFileLoc);
+	}
+	
+	//Getters & Setters
+	public File getAnalyzeFile(String fileLoc)
+	{
+		return analyzeFile;
+	}
+	public  void setAnalyzeFile(File file)
+	{
+		analyzeFile = file;
+	}
+	public void setAnalyzeFile(String fileLoc)
+	{
+		analyzeFile = new File(fileLoc);
+	}
+	
+	public String getFileContents()
+	{
+		return fileContents;
+	}
+	public void setFileContents(String fileContents)
+	{
+		this.fileContents = fileContents;
+	}
+	
+	//Methods
+	/**
+	 * Parse a file with text
+	 * @param fileType String that represents the type of file. Supported types: HTML
+	 * @return text String of the file's contents
+	 */
+	public String parseFile (String fileType)
+	{
+		FileReader parser;
+		switch(fileType)
+		{
+		case "HTML":
+			parser = new HTMLFileReader(analyzeFile);
+			break;
+		default:
+			parser = new FileReader(analyzeFile);
+			break;
+		}
+		
+		parser.readFile();
+		return parser.toString();
+	}
+	
+	
+/*	Console UI Code
 	public static void main(String[] args) 
 	{
 		fileLocPrompt(new Scanner(System.in));
 		parserPrompt(new Scanner(System.in));
 		analyzerPrompt(new Scanner(System.in));
 	}
-*/	
+
 	//console prompts
 	//give TextAnalyzer a file location to read
 	private static void fileLocPrompt(Scanner userInput)
@@ -101,5 +169,5 @@ public class TextAnalyzer
 		analyzeFile = new File(fileLoc);
 	}
 	
-	
+*/	
 }
