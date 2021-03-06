@@ -51,15 +51,15 @@ public class FileSelectController implements Initializable
 	
 	public void confirmFileSelect(ActionEvent event) throws IOException
 	{
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("FileAnalysisMenu.fxml"));
-		Parent fileAnalysisParent = loader.load();
-		Scene fileAnalysisScene = new Scene(fileAnalysisParent);
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("FileTypeSelect.fxml"));
+		Parent fileTypeSelectParent = loader.load();
+		Scene fileTypeSelectScene = new Scene(fileTypeSelectParent);
 		
-		FileAnalysisMenuController fileAnalysisMenuController = loader.getController();
-		fileAnalysisMenuController.setAnalyzeFile(selectFile);
+		FileTypeSelectController fileTypeSelectController = loader.getController();
+		fileTypeSelectController.setAnalyzeFile(selectFile);
 		
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		window.setScene(fileAnalysisScene);
+		window.setScene(fileTypeSelectScene);
 		window.show();
 	}
 }

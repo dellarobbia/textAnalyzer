@@ -1,21 +1,22 @@
 package application;
 
-import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
+import textAnalyzer.TextAnalyzer;
 
 public class FileAnalysisMenuController implements Initializable 
 {
-	private File analyzeFile;
+	//Properties
+	private TextAnalyzer analyzeFile;
 	
 	public FileAnalysisMenuController() 
 	{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void setAnalyzeFile(File analyzeFile)
+	public void setAnalyzeFile(TextAnalyzer analyzeFile)
 	{
 		this.analyzeFile = analyzeFile;
 	}
@@ -26,5 +27,5 @@ public class FileAnalysisMenuController implements Initializable
 		// TODO Auto-generated method stub
 
 	}
-	
+
 }

@@ -30,7 +30,7 @@
             </VBox>
             <VBox alignment="BOTTOM_RIGHT" prefHeight="29.0" prefWidth="374.0">
                <children>
-                  <Button fx:id="confirmFileSelectButton" mnemonicParsing="false" text="Next" />
+                  <Button fx:id="confirmFileSelectButton" mnemonicParsing="false" onAction="#confirmFileSelect" text="Next" />
                </children>
                <VBox.margin>
                   <Insets right="10.0" />
