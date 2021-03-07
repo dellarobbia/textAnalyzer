@@ -1,10 +1,12 @@
 INDEX VERSION 1.131+C:\Users\drewm\OneDrive\Documents\Homework\Software Development 1\Module 6\textAnalyzer\.metadata\.plugins\org.eclipse.jdt.core
-1457591920.index
-1709661731.index
 3752068775.index
-3818849358.index
-725180184.index
+1709661731.index
 3438169960.index
 1709196293.index
+2048241651.index
 953514382.index
+1457591920.index
+3818849358.index
 81454309.index
+205062489.index
+725180184.index

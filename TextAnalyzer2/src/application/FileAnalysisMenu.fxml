@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="76.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FileAnalysisMenuController">
+   <children>
+      <VBox prefHeight="67.0" prefWidth="233.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label text="Select the type of analysis to perform:" />
+            <ComboBox fx:id="fileAnalysisSelector" prefWidth="150.0" />
+            <VBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="323.0">
+               <children>
+                  <Button fx:id="fileAnalysisConfirm" mnemonicParsing="false" onAction="#runAnalysis" text="Show Report" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
-

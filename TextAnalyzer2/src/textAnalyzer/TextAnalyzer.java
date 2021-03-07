@@ -6,6 +6,7 @@ public class TextAnalyzer
 {
 	private File analyzeFile;
 	private String fileContents;
+	private String fileAnalysisResults;
 
 	//Constructors
 	public TextAnalyzer ()
@@ -52,6 +53,15 @@ public class TextAnalyzer
 		this.fileContents = fileContents;
 	}
 	
+	public String getFileAnalysisResults()
+	{
+		return fileAnalysisResults;
+	}
+	public void setFileAnalysisResults(String fileAnalysisResults)
+	{
+		this.fileAnalysisResults = fileAnalysisResults;
+	}
+	
 	//Methods
 	/**
 	 * Parse a file with text
@@ -75,7 +85,30 @@ public class TextAnalyzer
 		return parser.toString();
 	}
 	
+	/**
+	 * Run an analysis on the AnalyzeFile's contents
+	 * @param analysisSelection String indicating the type of analysis to perform:
+	 * <p>Word Count: Counts every word occurrence</p>
+	 * <p>Top 20 Word Count: Counts the top 20 words that occurred in the file</p>
+	 */
+	public void runAnalysis(String analysisSelection)
+	{
+		switch(analysisSelection)
+		{
+		case "Word Count":
+			WordCounter wordCounter = new WordCounter();
+			setFileAnalysisResults(wordCounter.analyze(fileContents));
+			break;
+		case "Top 20 Word Count":
+			WordCounter topWordCounter = new WordCounter();
+			setFileAnalysisResults(topWordCounter.analyze(fileContents, 20));
+		}
+	}
 	
+	public String toString()
+	{
+		return fileAnalysisResults;
+	}
 /*	Console UI Code
 	public static void main(String[] args) 
 	{
