@@ -102,6 +102,7 @@ public class TextAnalyzer
 		case "Top 20 Word Count":
 			WordCounter topWordCounter = new WordCounter();
 			setFileAnalysisResults(topWordCounter.analyze(fileContents, 20));
+			break;
 		}
 	}
 	
