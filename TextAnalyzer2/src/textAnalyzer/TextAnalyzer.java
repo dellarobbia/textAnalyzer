@@ -31,7 +31,7 @@ public class TextAnalyzer
 	}
 	
 	//Getters & Setters
-	public File getAnalyzeFile(String fileLoc)
+	public File getAnalyzeFile()
 	{
 		return analyzeFile;
 	}
