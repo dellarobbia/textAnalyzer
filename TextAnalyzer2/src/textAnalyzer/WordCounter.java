@@ -9,9 +9,18 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
+/**
+ * Analyzes the number of times each word occurs in a file
+ * @author Andrew McKay
+ *
+ */
 public class WordCounter implements Analyzers
 {
 	//Properties
+	/**
+	 * HashMap that maps distinct Strings to an integer representing the number of times 
+	 * 		each word occurs in the file
+	 */
 	private HashMap<String, Integer> wordCount;
 	
 	//Constructor
@@ -36,6 +45,12 @@ public class WordCounter implements Analyzers
 		countWords(analyzeText);
 		return toString();
 	}
+	/**
+	 * Overloaded analyze method that only returns the top number of words determined by the user
+	 * @param analyzeText String
+	 * @param numOfTopWords integer
+	 * @return String of text representing the top occurring words
+	 */
 	public String analyze(String analyzeText, int numOfTopWords)
 	{
 		countWords(analyzeText);
@@ -70,6 +85,10 @@ public class WordCounter implements Analyzers
 	}
 	
 	//Class Methods
+	/**
+	 * Count the number of times each word occurs in the given text string
+	 * @param wordString String of text to process
+	 */
 	public void countWords(String wordString)
 	{
 		//Remove punctuation & change all words in text to lowercase
@@ -87,6 +106,11 @@ public class WordCounter implements Analyzers
 		stringReader.close();
 	}
 	
+	/**
+	 * Check if a single word has been counted already. 
+	 * 		If so, increment its count by one; if not, add the word to the HashMap
+	 * @param word single word to check
+	 */
 	private void countWord(String word)
 	{
 		int wordOccurance = 1;
@@ -102,7 +126,9 @@ public class WordCounter implements Analyzers
 		}
 	}
 	
-	//sort the words from greatest to least
+	/**
+	 * Sort the words from greatest to least in terms of number of occurrences
+	 */
 	public void sortTopWords()
 	{
 		//create a copy of wordCount to sort

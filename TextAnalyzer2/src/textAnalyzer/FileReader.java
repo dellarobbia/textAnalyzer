@@ -4,10 +4,21 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-//Generic FileReader designed to output all of a given file's text to a String; does not parse out any formatting
+/**
+ * Generic FileReader designed to output all of a given file's text to a String; does not parse out any formatting
+ * @author Andrew McKay
+ *
+ */
+
 public class FileReader implements Readers 
 {
+	/**
+	 * The file to be analyzed; given by the user.
+	 */
 	private File file;
+	/**
+	 * The contents of the file represented by a String.
+	 */
 	private String fileContents = "";
 	
 	//Constructors
@@ -63,6 +74,4 @@ public class FileReader implements Readers
 	{
 		return getFileContents();
 	}
-
-	//Class Methods
 }

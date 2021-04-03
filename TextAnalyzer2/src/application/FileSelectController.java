@@ -17,6 +17,12 @@ import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+/**
+ * Controller for the File Select user interface
+ * <p>Allows the user to select a file for analysis</p>
+ * @author Andrew McKay
+ *
+ */
 public class FileSelectController implements Initializable
 {
 	//Labels

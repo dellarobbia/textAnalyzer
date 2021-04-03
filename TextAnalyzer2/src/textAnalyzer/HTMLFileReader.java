@@ -7,8 +7,12 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-//Variant FileReader that passes all text from an HTML file to a String; parses out HTML tags;
-//only returns text under header and paragraph elements
+/**
+ * Variant FileReader that passes all text from an HTML file to a String; parses out HTML tags; 
+ * 		only returns text under header and paragraph elements
+ * @author Andrew McKay
+ *
+ */
 public class HTMLFileReader extends FileReader implements Readers 
 {
 	

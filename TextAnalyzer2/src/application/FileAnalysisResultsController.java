@@ -10,6 +10,12 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+/**
+ * Controller for File Analysis Results
+ * <p>Displays the results of the analysis to the user</p>
+ * @author Andrew McKay
+ *
+ */
 public class FileAnalysisResultsController implements Initializable 
 {
 	//Labels

@@ -110,6 +110,8 @@ public class TextAnalyzer
 	{
 		return fileAnalysisResults;
 	}
+	
+	
 /*	Console UI Code
 	public static void main(String[] args) 
 	{

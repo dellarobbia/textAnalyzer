@@ -18,6 +18,15 @@ import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import textAnalyzer.TextAnalyzer;
 
+/**
+ * Controller for the Filetype Select user interface
+ * <p>Allows the user to establish the type of file being analyzed and uses the appropriate parser</p>
+ * <p>Supports:<br>
+ * 		&mdash;.txt (default; no parser used)<br>
+ * 		&mdash;.htm/.html<br>
+ * @author Andrew McKay
+ *
+ */
 public class FileTypeSelectController implements Initializable 
 {
 	//Comboboxes

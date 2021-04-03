@@ -17,6 +17,12 @@ import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import textAnalyzer.TextAnalyzer;
 
+/**
+ * Controller for the File Analysis Menu:
+ * <p>Allows  the user to select an analysis to perform on their file</p>
+ * @author Andrew McKay
+ *
+ */
 public class FileAnalysisMenuController implements Initializable 
 {
 	//Comboboxes
