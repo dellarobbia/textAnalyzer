@@ -2,6 +2,8 @@ package textAnalyzer;
 
 import java.io.File;
 
+import analysisDB.DBController;
+
 public class TextAnalyzer 
 {
 	private File analyzeFile;
@@ -98,14 +100,24 @@ public class TextAnalyzer
 		case "Word Count":
 			WordCounter wordCounter = new WordCounter();
 			setFileAnalysisResults(wordCounter.analyze(fileContents));
+			saveResults(wordCounter);
 			break;
 		case "Top 20 Word Count":
 			WordCounter topWordCounter = new WordCounter();
 			setFileAnalysisResults(topWordCounter.analyze(fileContents, 20));
+			saveResults(topWordCounter);
 			break;
 		}
 	}
 	
+	private void saveResults(WordCounter wordCounter) 
+	{
+		DBController analysisDB = new DBController(analyzeFile.getName());
+		for(String word : wordCounter.getWordCount().keySet())
+		{
+			analysisDB.addWordOccurance(word, wordCounter.getWordCount().get(word));
+		}
+	}
 	public String toString()
 	{
 		return fileAnalysisResults;
