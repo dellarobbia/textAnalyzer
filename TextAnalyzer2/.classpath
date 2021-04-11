@@ -49,5 +49,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/drewm/OneDrive/Documents/Homework/Software Development 1/Module 2/TextAnalyzer2/jsoup-1.13.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="F:/SQLite/SQLite JDBC.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
